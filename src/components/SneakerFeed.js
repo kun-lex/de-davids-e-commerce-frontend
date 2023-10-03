@@ -10,6 +10,7 @@ function SneakerFeed() {
     <div className='flex items-center justify-center space-x-24 mt-24 ' >
         {/* <img src={sneakerImage} className=' w-[400px] h-[200px] ' alt="Sneakers" /> */}
         <ImageSlider
+          className='object-contain h-[200px] w-[400px]  '
           images={images}
           interval={4000}
         />
