@@ -15,7 +15,7 @@ const ImageSlider = ({ images, interval }) => {
 
   return (
     <div style={{ position: 'relative', overflow : 'hidden', width: '300px',
-      height: '400px' }}>
+      height: '150px' }}>
       {images.map((image, index) => (
         <img
           key={index}

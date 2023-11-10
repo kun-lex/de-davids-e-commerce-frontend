@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { SearchIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom"
 
+
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -15,13 +16,13 @@ function Navbar() {
             <h1>LOGO</h1>
             <div className='relative' >
                 <div className=' absolute inset-y-0 flex pl-2 items-center pointer-events-none ' >
-                    <SearchIcon className='h-5 w-5 text-gray-300' />
+                  <SearchIcon className='h-5 w-5 text-gray-300' />
                 </div>
                 <input
-                    type='text'
-                    placeholder='Search'
-                    name='search'
-                    className='h-[30px] w-[200px] rounded-full border pl-7 bg-transparent '
+                  type='text'
+                  placeholder='Search'
+                  name='search'
+                  className='h-[30px] w-[200px] rounded-full border pl-7 p-2 bg-transparent '
                 />
             </div>
                 <div className="md:hidden">
@@ -69,9 +70,9 @@ function Navbar() {
                 <a href='/'>Contact</a>
             </div>
             <div className='hidden space-x-2 items-center md:flex' >
-                <a href='/login' >
+                <Link to='/login' >
                   <button>Login</button>
-                </a>
+                </Link>
                 <a href="/sign-up">
                     <button className='text-black w-[70px] h-[25px] bg-white rounded-full ' >Sign up</button>
                 </a>
@@ -80,17 +81,42 @@ function Navbar() {
         {isOpen && (
             <div className="md:hidden mt-4 space-y-1">
               <a href="/" className="block text-white">Category</a>
+              <hr />
               <a href="/" className="block text-white">Styles</a>
+              <hr />
               <a href="/" className="block text-white">About</a>
+              <hr />
               <a href="/" className="block text-white">Contact</a>
+              <hr />
               <div className='space-x-2' >
-              <a href="/login">
-              <button className='text-white' >Login</button>
-              </a>
-              <a href="/sign-up">
-              <button className='text-black w-[70px] h-[25px] bg-white rounded-full ' >Sign up</button>
-              </a>
+                <a href="/login">
+                <button className='text-white' >Login</button>
+                </a>
+                <a href="/sign-up">
+                <button className='text-black w-[70px] h-[25px] bg-white rounded-full ' >Sign up</button>
+                </a>
               </div>
+              {/* <div class="menu">
+              <div></div>
+              <div style="transition-delay: 0.1s"></div>
+              <div style="transition-delay: 0.2s"></div>
+              <div style="transition-delay: 0.3s"></div>
+              <div style="transition-delay: 0.4s"></div>
+              <ul>
+                <li style="animation-delay: 0.4s">
+                  <a href="#home">About</a>
+                </li>
+                <li style="animation-delay: 0.5s">
+                  <a href="#home">Services</a>
+                </li>
+                <li style="animation-delay: 0.6s">
+                  <a href="#home">Products</a>
+                </li>
+                <li style="animation-delay: 0.7s">
+                  <a href="#home">Contact</a>
+                </li>
+              </ul>
+              </div> */}
             </div>
           )}
     </nav>
